@@ -1,0 +1,16 @@
+......Opened stub database dbName
+.........Closed stub database dbName
+Opened stub database Stub
+.Closed stub database stub
+Opened stub database Stub
+.Closed stub database stub
+Opened stub database Stub
+.Closed stub database stub
+Opened stub database Stub
+.Closed stub database stub
+Opened stub database Stub
+
+Time: 0.187
+
+OK (19 tests)
+
