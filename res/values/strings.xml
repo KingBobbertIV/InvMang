@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">inventorymanagement</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_use_stub">Use Stub Database</string>
+    <string name="action_use_real">Use Real Database</string>
+    <string name="inventory_management">Inventory Management</string>
+    <string name="checkout_mode">Checkout Mode</string>
+    <string name="supplier_management">Order Management</string>
+    <string name="addProductMessage">Add New Product</string>
+    <string name="add_product_dialog_title">Add Product</string>
+    <string name="accept_button">Accept</string>
+    <string name="cancel_button">Cancel</string>
+    <string name="action_search">Search</string>
+    <string name="dbName">inventory_management</string>
+
+</resources>

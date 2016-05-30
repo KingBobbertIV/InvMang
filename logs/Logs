@@ -1,0 +1,404 @@
+Date: February 4th, 2015
+
+Attendance: All group members
+
+
+Big User Stories for Iteration 1:
+	Browse Items
+	List of Items
+
+We need to
+	Set up a listView that one can scroll through
+	JUnit tests - Product, ProductList
+	Edit Product Information Dialog
+	Add and remove product dialogs
+	Organize Items by displayed traits
+	
+	GUI is the main thing
+	
+  Each group member must:
+  	Research GUIs
+  	Figure out GUIs before Saturday
+  	Meet on Saturday at 2:00pm
+  
+  
+  
+  Date: Feb 7, 2015
+  
+  Note to group: When appropriate, implement a test case to ensure that no two products ever share a productID.
+  
+  Team got together in E2 - 430 to work on Iteration 1
+  
+  Mickeal N - Worked on Presentation
+  Young S - Worked on Presentation
+  Peter B - Worked on Presentation
+  Jonathan G - Performed TDD on Business; outlined persistence stub
+  Michael K - Performed TDD on Business; outlined persistence stub
+  
+  
+  
+  
+  Date: February 9, 2015
+  
+ 	Group members gathered in E2-430 to work on Iteration 1.  All members attended.
+ 	Tasks for Monday
+ 
+ 
+  Date: February 11, 2015
+  
+  	Peter, Yang, and Michael gathered in E2-430 at 12:30pm to put finishing touches on the project's first iteration.
+  	Jon and Mickeal arrived at 2:15pm
+  	
+ 
+ Date: February 23 2015
+ 	
+ 	Mickeal N:
+ 	Looked into preventing user from adding more than two digits via input filter.  No success, used bigdecimal
+ 	to round prices instead. - 1 Hour in total
+ 	Built GUI for checkout mode - 30 minutes
+ 	
+ Date: February 25th 
+ 
+ 	Mickeal N:
+ 	Added CheckoutModeActivity.java and made it get called to bring up the interface to the front when the 
+ 	button on the main screen is pressed. Improved on CheckoutModeInterface - 40 minutes
+ 	Refactored InventoryManagementActvity a little - 25 minutes
+ 	 
+ 	
+ 
+ March 2, 2015
+ (Iteration 2)
+  
+     Michael K, Peter B, and Jonathan G met in the Windows lab to work on the new DBInterface for persistence and begin work on
+  the HSQL database.
+  
+ 
+  	Michael K and Peter B - Designed and wrote DBInterface.
+  	
+    Jonathan G - Set up the groundwork for the HSQL database with modified SRSYS code.
+ 
+  	Michael K - Factored out and improved upon the productID management system shared between the stub and HSQL Databases.
+  	
+  	Mickeal N:
+  	Refactored more of InventoryManagementActivity, and continued to work on CheckoutModeActivity.
+  	Got products to display and created a simple list adapter. Can be customized later if need be.
+  	Fixed a bug where buttons on InventoryMangementActivity weren't disabled when they should 
+  	have been. - 2 hours
+  	
+Date: March 4, 2015
+
+	Peter worked on a few GUI things such as a back button on the Action Bar (~ 30 min) and fixing the issue with multiple error dialog	
+			pop-ups when fields are not full in the inventory management Activity (~ 15 min)
+			
+			
+	
+	  Michael K worked on the script file for the database, did some refactoring on DBAccess, and created the first version of DataAccessService (the service controller); working approximately
+	from 14:30 to 18:16.
+	
+	Mickeal N: Added functionality to CheckoutModeActivity, made it able to select items (slightly buggy)
+	and added the ability to remove them. A bug gets fixed around this on March 6 (when I'm writing this)
+	Fixed a but in DataAccess which was causing data access objects in certain cases not to actually get data 
+	from the stub database. - 1.5 Hours
+	
+Date:	March 5, 2015
+
+	Michael K - Realized part of the DBMS (ManageProductIds) was incompatible with persistent data storage; and added a private class (ManageProductIds.PersistenceUnit) to fix the issue.
+	Related files (DBAccess and DataAccessStub) were altered to make use the ManageProductIds constructors appropriate for their purposes.
+	
+	March 6, 2015
+	
+	Peter B,  Mickeal N - Pair programming: Fixed issues with checkout Mode Activity (30 min) Created Cart class to manage data within checkoutModeActivity (1:30)
+	Michael K - Added additional methods to DBInterface to support the needs of checkoutModeActivity
+			  - Refactored DataAccessStub so that it only returns deep copies of its product objects
+			  - Tested & refactored database script file
+			  
+Date: March 7, 2015
+
+	Peter B - worked on the checkoutMode interface, including a checkkout button, and teh diplay which shows the price(1-2 hrs)
+	        - created GUI for changing b/w stub and real Databases (30 min)
+	        
+Date: March 8, 2015
+
+	Peter B - Added an empty() method to Cart, refactoring code out of sellAll()
+			- wrote a testCart Class 	        
+	        
+	Yang S - changed the method addProduct in class Cart 
+		from
+		public int addToCart(int productID)
+		to
+		public int addToCart(int productID, int quantity)
+		because we are not only add exactly one product.
+		
+		return a integer to specified excute successful or failed. detail info in the function comment
+		
+Date: March 9, 2015
+	2:35
+	Yang S (40 minutes)
+		- refactoring the cart.java
+		return a integer to specified excute successful or failed. detail info in the function comment
+		- add comments for the functions 
+	4:04
+	Yang S	(1.5 hour)
+		- add a spinner and a textview into the checkout activity. the spinner show products id as a list.
+		user choose the product id, fill the quantity to add the product into cart.		
+	12:45
+	Yang S	(1 hour)
+		-fixed the error "the database already used by other process!" when startup
+		
+	
+	Peter B and Mickeal N 	- fixed Cart (reverted to March 8th)
+							- fixed Cart Tests, 
+							- fixed .bat files
+								-refactored all android code out of business
+								
+								
+								
+	Yang S, Michael K, and Peter B - Worked on integrating the persistent database.
+	
+Date: March 10, 2015
+
+	Yang S, Peter B, and Mickeal N 
+						- Fixed Compile.bat
+						- fixed RunUnitTests.bat
+						- Modified Readme.txt
+						- Create RestoreDB.bat
+						- Final QC tests
+						
+						
+						
+						
+Date: March 18, 2015
+
+
+	All team members got together in the computer lab to work on the iteration 3.
+	
+	
+		(New) Big User Stories for this iteration:
+		
+			Order Management
+			Search Inventory
+			Low Stock Notification
+	
+	
+	Michael K - drafted Iteration 3 detailed user stories
+	Yang S, Michael K  - Updated DB.script, DBInterface, DBAccess and DataAccessStub (began work on Order Management)
+	Yang S, Peter B - Put together domain-specific objects for Orders
+	Jonathan G - Worked on Low Stock Notification.
+	Mickeal N - Worked on iteration 3 (The person recording this log entry knows Mickeal N was present but is not aware of the specifics of his work).
+
+
+
+Date: March 20, 2015
+
+Michael K - Refactored the ManageProductIDs to manage OrderIDs as well as productIDs.  ManageProductIDs was renamed GeneralIDManager.
+		  - Integrated the new DB.script into the project.  Integrity constraints are keeping the user from deleting Bananas or Water, but exception handling hasn't been updated to allow the
+		    GUI to tell them "You can't delete those items because they're part of an incoming shipment."
+
+
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	
+	
+	
+			New Detailed User Stories:
+			
+			
+		S U B S T O R I E S   O F   " O R D E R   M A N A G E M E N T "
+		
+---------------------------------------------------------
+	Order Placement
+
+	We need to track the orders we have placed.
+
+
+	Priority: Medium
+	Estimate: ____
+---------------------------------------------------------
+
+
+
+---------------------------------------------------------
+	Arrival
+
+	We need to be able to notify the system when an
+order arrives and have it compute the changes to our
+inventory.	
+
+
+	Priority: High
+	Estimate: ____
+----------------------------------------------------------
+
+			
+			
+		S U B S T O R I E S   O F   " S E A R C H   I N V E N T O R Y "
+
+
+-----------------------------------------------------------
+	Search by Name
+
+
+	We need to find all the products in our inventory
+whose names contain a keyword.
+
+	Priority: high
+	Estimate: ____
+-----------------------------------------------------------
+
+
+-----------------------------------------------------------
+	Search by Description
+
+
+	We need to be able to find all the products in our
+inventory whose descriptions contain any of a number of
+keywords.
+
+	Priority: Low
+	Estimate: ____
+-----------------------------------------------------------
+
+
+	S U B S T O R I E S   O F   " L O W   S T O C K   N O T I F I C A T I O N "
+	
+
+------------------------------------------------------------
+	Low Stock Alert
+
+	We need to be warned when our stock of a product
+goes below a certain critical threshold.
+
+
+	Priority: High
+	Estimate: ______
+-----------------------------------------------------------
+
+
+-----------------------------------------------------------
+
+	Custom Threshold
+
+	We need to adjust the low stock thresholds for
+individual products as we determine how popular they are
+with our customers.
+
+
+	Priority: Medium
+	Estimate: ______
+------------------------------------------------------------
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Date: March 20, 2015
+Yang S 
+	- create a class AccessOrders in business
+	- refactoring the checkout activity
+	
+	
+Date: March 23, 2015
+Yang S 
+	finished add order in the checkout activity
+	
+Mickeal N - Created activity_ordermanagement and OrderManagementActivity... then
+through a combination of errors/mistakes with CVS I accidently deleted all my work
+done today... so I quickly rebuilt activity_ordermanagement. 
+Will Rebuild the other one tomorrow 
+	
+	
+Michael K
+	Refactored persistence
+
+
+Date: March 25, 2015
+Yang S 
+	- create a class OrderItem to represent each item in order
+	- refactoring add order, update order, and get order
+	- changed the dateplaced filed type (DATE => DATESTAMP), the hsqldb only accepts the data form like
+		yyyy-MM-dd HH:mm:ss
+	- finished the unit test of add order, update order, and get order
+	
+Date: March 25, 2015
+Yang S 
+	finished get orders method
+	finished the corresponds unit test
+	
+Mickeal N:
+Got OrderManagementActivity skeleton done. Will populate both ArrayAdapters.. now to make
+the second one update based on the first.
+
+Date: March 25, 2015
+Yang S 
+	implemented the first version of data access stub for order management
+	
+Michael K
+	Added new methods to DBInterface and the classes implementing it.
+	
+March 27, 2015
+
+Peter B
+	Finished OrderBuild, got tests for it working properly.
+
+	Date: March 25, 2015
+	
+
+Yang S 
+	working on refactoring and add the unit test of persistance
+	Date: March 25, 2015	
+	
+Mickeal N:
+	Got OrderManagementActivity fully displaying content and buttons and text fields responding 
+	appropriately to what is clicked. Buttons remain nonfunctional at this moment
+	Updated GUI for OrderManagement so it's cleaner to use
+	
+	
+Michael K:
+		Implemented get(int) method for retrieving orderItems from an Order object without pulling out the entire arraylist
+		Fixed a potential problem where orderItems weren't sorted
+		Added an insert(OrderItem) and getProductIdsCount() into Orders
+		
+		Added a new 'supplierCost' field to the product table in DB.script, and made the necessary changes in Product.java, TableAttributes.java, and DBAccess.java
+		
+Yang S 
+	1. use the auto increment primary key provided by HSQLDB instead of GeneralIdManager (also there is bug in GenaralIdManager)
+	2. fixed the bug on extractProduct, which use the resultSet.next() twice
+	3. changed the method name in DBAccess class
+	4. finished the unit test for product operation in DBAccess class
+		add product
+		remove product 
+		get product
+		update product
+		get all product 
+	5.add comments for the method in DBAccess
+	
+	Date: March 29, 2015	 12:02
+	
+Yang S 
+	1. fix the bug in inventory management ----- product cannot be updated
+	
+	Date: March 29, 2015	 13:32
+	
+Yang S
+	1.fix the bug in getOrders method
+		the getOrders method always missing one order 
+	2.fixed the bug in updateOrder method
+	3.fixed the bug in updateOrder method
+		when you update order with less order items, got mistake
+	3.implements the unit test for order operations
+		passed unit test!
+		
+	Date: March 29, 2015	 18:59
+
+Yang S
+	1.add comments for DBAccess
+	Date: March 29, 2015	 19:57
+	
+Yang S
+	1.fixed the unit test for AccessOrdersTest.testInsertGetOrder
+	Date: March 29, 2015	 21:53
+	
+Yang S
+	1.fixed the unit test for DBAccessStub
+	Date: March 30, 2015	 9:05

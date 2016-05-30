@@ -1,0 +1,92 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <TextView
+        android:id="@+id/productNamePrompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="70dp"
+        android:text="Product Name"
+        android:textSize="25dp" />
+
+    <EditText
+        android:id="@+id/productNameEntry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/productNamePrompt"
+        android:layout_marginLeft="30dp"
+        android:layout_toRightOf="@+id/productNamePrompt"
+        android:ems="15" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/productPricePrompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/productNamePrompt"
+        android:layout_below="@+id/productNameEntry"
+        android:layout_marginTop="24dp"
+        android:text="Price"
+        android:textSize="25dp" />
+
+    <EditText
+        android:id="@+id/productPriceEntry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/productNameEntry"
+        android:layout_alignRight="@+id/productNameEntry"
+        android:layout_alignTop="@+id/productPricePrompt"
+        android:ems="10"
+        android:inputType="number|numberDecimal" />
+
+    <TextView
+        android:id="@+id/productQuantityPrompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/productPricePrompt"
+        android:layout_below="@+id/productPricePrompt"
+        android:layout_marginTop="24dp"
+        android:text="Amount"
+        android:textSize="25dp" />
+
+    <EditText
+        android:id="@+id/productQuantityEntry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/productPriceEntry"
+        android:layout_alignRight="@+id/productPriceEntry"
+        android:layout_alignTop="@+id/productQuantityPrompt"
+        android:ems="10"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/productDescriptionPrompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/productQuantityPrompt"
+        android:layout_below="@+id/productQuantityEntry"
+        android:layout_marginTop="24dp"
+        android:text="Description"
+        android:textSize="25dp" />
+
+    <EditText
+        android:id="@+id/productDescriptionEntry"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id/productQuantityEntry"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/productQuantityEntry"
+        android:layout_alignTop="@+id/productDescriptionPrompt"
+        android:layout_marginBottom="93dp"
+        android:gravity="left|top"
+        android:ems="10"
+        android:inputType="textMultiLine" />
+
+</RelativeLayout>
+

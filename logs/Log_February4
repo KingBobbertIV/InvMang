@@ -1,0 +1,53 @@
+Date: February 4th, 2015
+
+Attendance: All group members
+
+
+Big User Stories for Iteration 1:
+	Browse Items
+	List of Items
+
+We need to
+	Set up a listView that one can scroll through
+	JUnit tests - Product, ProductList
+	Edit Product Information Dialog
+	Add and remove product dialogs
+	Organize Items by displayed traits
+	
+	GUI is the main thing
+	
+  Each group member must:
+  	Research GUIs
+  	Figure out GUIs before Saturday
+  	Meet on Saturday at 2:00pm
+  	
+
+
+  Tasks and group members:
+  
+  Michael K -
+  Mickeal N - 
+  Jonathan G - 
+  Peter B - 
+  Young S - 
+  
+  
+  
+  Date: Feb 7, 2015
+  
+  Note to group: When appropriate, implement a test case to ensure that no two products ever share a productID.
+  
+  Team got together in E2 - 430 to work on Iteration 1
+  
+  Mickeal N - Worked on Presentation
+  Young S - Worked on Presentation
+  Peter B - Worked on Presentation
+  Jonathan G - Performed TDD on Buisness; outlined persistence stub
+  Michael K - Performed TDD on Buisness; outlined persistence stub
+  
+  
+  
+  
+  Date: February 9, 2015
+  
+  

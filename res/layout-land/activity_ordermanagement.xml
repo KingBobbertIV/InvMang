@@ -1,0 +1,86 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:id="@+id/buttonlayout"
+        android:layout_height="wrap_content"
+        android:layout_width="250dp"
+        android:orientation="vertical"
+        android:layout_toRightOf="@+id/orderView" >
+
+        <Button
+            android:id="@+id/addItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClickAddButtonOM"
+            android:text="" />
+
+        <Button
+            android:id="@+id/applyEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClickAcceptButtonOM"
+            android:text="" />
+
+        <Button
+            android:id="@+id/removeItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClickRemoveButtonOM"
+            android:text="" />
+        <TextView
+        	android:id="@+id/mainItemTextView"
+        	android:layout_width="match_parent"
+        	android:layout_height="wrap_content"
+        	android:text=""
+        	android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    	<EditText
+	        android:id="@+id/mainItemEditText"
+        	android:layout_width="match_parent"
+        	android:layout_height="wrap_content"
+        	android:ems="10"
+        	android:inputType="number" >
+
+
+	    </EditText>
+
+    	<TextView
+        	android:id="@+id/subItemTextView"
+        	android:layout_width="match_parent"
+        	android:layout_height="wrap_content"
+        	android:text=""
+        	android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    	<EditText
+	        android:id="@+id/subItemEditText"
+        	android:layout_width="match_parent"
+        	android:layout_height="wrap_content"
+        	android:ems="10"
+        	android:inputType="number" />
+    	
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/orderView"
+        android:layout_height="match_parent"
+        android:layout_width="350dp"
+        android:layout_alignParentLeft="true"
+        android:paddingRight="5dp" >
+    </ListView>
+
+    <ListView
+        android:id="@+id/orderedProductsView"
+        android:layout_height="match_parent"
+        android:layout_width="350dp"
+        android:layout_toRightOf="@+id/buttonlayout"
+        android:layout_centerVertical="true" >
+    </ListView>
+
+    
+
+</RelativeLayout>

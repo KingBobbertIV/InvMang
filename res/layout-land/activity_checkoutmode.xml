@@ -1,0 +1,147 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <EditText
+        android:id="@+id/productIdEntry"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/productIdPrompt"
+        android:layout_alignBottom="@+id/productIdPrompt"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/productIdPrompt"
+        android:ems="10"
+        android:inputType="number" />
+    
+    <Button
+        android:id="@+id/productAddButton"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/productIdEntry"
+        android:layout_toRightOf="@+id/productIdEntry"
+        android:onClick="onClickAddToCheckout"
+        android:text="Enter" />
+
+    <Button
+        android:id="@+id/productRemoveButton"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/productAddButton"
+        android:layout_alignTop="@+id/productAddButton"
+        android:layout_toRightOf="@+id/productAddButton"
+        android:onClick="onClickRemoveFromCheckout"
+        android:text="Remove" />
+
+    <TextView
+        android:id="@+id/productIdPrompt"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="57dp"
+        android:text="Product ID"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+    
+    <ListView
+        android:id="@+id/checkoutList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/productAddButton"
+        android:layout_marginBottom="160dp" >
+
+    </ListView>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="124dp"
+        android:layout_toRightOf="@+id/productAddButton"
+        android:text="Sub-Total"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/TextView01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="95dp"
+        android:layout_toRightOf="@+id/productAddButton"
+        android:text="GST"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/TextView02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="61dp"
+        android:layout_toRightOf="@+id/productAddButton"
+        android:text="PST"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="19dp"
+        android:layout_toRightOf="@+id/productAddButton"
+        android:text="Total"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/tvSubtotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView1"
+        android:layout_alignRight="@+id/productRemoveButton"
+        android:text="$0.00"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tvPst"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/TextView01"
+        android:layout_alignRight="@+id/tvSubtotal"
+        android:text="$0.00"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+    
+    <TextView
+        android:id="@+id/tvGst"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/TextView02"
+        android:layout_alignRight="@+id/tvSubtotal"
+        android:text="$0.00"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tvTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView2"
+        android:layout_alignBottom="@+id/textView2"
+        android:layout_alignRight="@+id/tvGst"
+        android:text="$0.00"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <Button
+        android:id="@+id/btCheckout"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView2"
+        android:layout_alignRight="@+id/productAddButton"
+        android:layout_below="@+id/tvSubtotal"
+        android:layout_toRightOf="@+id/productIdPrompt"
+        android:layout_marginRight="50dp"
+        android:onClick="onClickCheckout"
+        android:text="Checkout" />
+
+</RelativeLayout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+	<LinearLayout
+ 		android:layout_width="match_parent"
+   		android:layout_height="match_parent" 
+   		android:orientation="horizontal"
+   		android:columnCount="3"
+   		android:rowCount="1">
+
+        <Button
+            android:id="@+id/button_add_product"
+            android:layout_column="0"
+            android:layout_width="200dp"
+	  		android:layout_height="wrap_content"
+            android:text="Add Product"
+            android:onClick="onClickAddProduct" />
+        <Button
+            android:id="@+id/button_edit_product"
+            android:layout_column="1"
+            android:layout_width="200dp"
+	  		android:layout_height="wrap_content"
+            android:text="Edit" 
+            android:onClick="onClickEditProduct" />
+        <Button
+            android:id="@+id/button_remove_product"
+            android:layout_column="2"
+            android:layout_width="200dp"
+	  		android:layout_height="wrap_content"
+            android:text="Remove" 
+            android:onClick="onClickRemoveProduct" />  
+    </LinearLayout>   
+
+    <LinearLayout
+ 		android:layout_width="match_parent"
+   		android:layout_height="match_parent" 
+   		android:orientation="horizontal"
+   		android:columnCount="4"
+   		android:rowCount="1">
+        
+        <TextView
+            android:layout_column="0"
+            android:layout_width="150dp"
+	  		android:layout_height="wrap_content"
+	  		android:gravity="center"
+            android:text="id"
+            android:textSize="20sp" />
+        <TextView
+            android:layout_column="1"
+            android:layout_width="150dp"
+	  		android:layout_height="wrap_content"
+	  		android:gravity="center"
+            android:text="name"
+            android:textSize="20sp" />
+        <TextView
+            android:layout_column="2"
+            android:layout_width="150dp"
+	  		android:layout_height="wrap_content"
+	  		android:gravity="center"
+            android:text="price"
+            android:textSize="20sp" />
+        <TextView
+            android:layout_column="3"
+            android:layout_width="150dp"
+	  		android:layout_height="wrap_content"
+	  		android:gravity="center"
+            android:text="quantity"
+            android:textSize="20sp" />
+     </LinearLayout>
+     
+     <ListView
+	        android:id="@+id/product_list_view"  
+	        android:layout_width="match_parent"  
+	        android:layout_height="match_parent"
+	    />
+
+</LinearLayout>
