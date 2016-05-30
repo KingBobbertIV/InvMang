@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="comp3350.team8.inventorymanagement"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="19"
+        android:targetSdkVersion="19" />
+
+    <application
+        android:name="comp3350.team8.inventorymanagement.application.InventoryApp"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity android:name="comp3350.team8.inventorymanagement.presentation.MainActivity" android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="comp3350.team8.inventorymanagement.presentation.InventoryManagerActivity" android:label="@string/app_name"
+            	  android:parentActivityName="comp3350.team8.inventorymanagement.presentation.MainActivity">
+        </activity>
+        <activity android:name=".application.AddProductActivity" android:label="@string/app_name">
+        </activity>
+        <activity android:name="comp3350.team8.inventorymanagement.presentation.CheckoutModeActivity" 
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustPan"
+            android:parentActivityName="comp3350.team8.inventorymanagement.presentation.MainActivity">
+        </activity>
+        <activity android:name="comp3350.team8.inventorymanagement.presentation.OrderManagementActivity" android:label="@string/app_name"
+            	  android:parentActivityName="comp3350.team8.inventorymanagement.presentation.MainActivity">
+        </activity>
+        
+        <uses-library android:name="android.test.runner" />
+    </application>
+
+    <instrumentation android:targetPackage="comp3350.team8.inventorymanagement" android:name="android.test.InstrumentationTestRunner" />
+</manifest>
